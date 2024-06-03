@@ -24,12 +24,23 @@ app.post('/item/add', (req, res) => {
 // Web API
 app.get('/api/weather/:id', (req, res) => {
     const data = {
-        place: "Yokohama",
-        date: new Date(),
-        temperature: 25.3,
-        weather: 'fine',
+        13: {
+            place: "Tokyo",
+            date: new Date(),
+            temperature: 25.5,
+            weather: 'fine',
+        },
+        14: {
+            place: "Kanagawa",
+            date: new Date(),
+            temperature: 25.3,
+            weather: 'cloud',
+        },
     };
-    res.json(data);
+    var result = {}
+    var id = req.params.id;
+    if (data[id]) result = data[id];
+    res.json(result);
 });
 
 
