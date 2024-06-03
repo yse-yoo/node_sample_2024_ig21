@@ -21,6 +21,18 @@ app.post('/item/add', (req, res) => {
     res.send('success!!');
 })
 
+// Web API
+app.get('/api/weather/:id', (req, res) => {
+    const data = {
+        place: "Yokohama",
+        date: new Date(),
+        temperature: 25.3,
+        weather: 'fine',
+    };
+    res.json(data);
+});
+
+
 // サーバ待機（server listen)
 app.listen(port, () => {
     console.log(`Server listen http://localhost:${port}`)
