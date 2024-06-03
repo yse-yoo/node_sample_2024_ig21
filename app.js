@@ -15,6 +15,12 @@ app.get('/profile', (req, res) => {
     res.send('Profile Page');
 })
 
+// /item/add にPOSTリクエスト
+app.post('/item/add', (req, res) => {
+    // データ追加処理
+    res.send('success!!');
+})
+
 // サーバ待機（server listen)
 app.listen(port, () => {
     console.log(`Server listen http://localhost:${port}`)
