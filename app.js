@@ -11,6 +11,10 @@ app.get('/', (req, res) => {
     res.send('Hello, Node.js page.');
 })
 
+app.get('/profile', (req, res) => {
+    res.send('Profile Page');
+})
+
 // サーバ待機（server listen)
 app.listen(port, () => {
     console.log(`Server listen http://localhost:${port}`)
