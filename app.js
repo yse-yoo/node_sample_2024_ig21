@@ -8,7 +8,7 @@ const port = 3000;
 // Routing（ルーティング）
 // WebRoot「/」にGETリクエストしたら動作
 app.get('/', (req, res) => {
-    res.send('Hello, Node.js page.');
+    res.send('こんにちは');
 })
 
 app.get('/profile', (req, res) => {
